@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     gdebi-core \
     vim \
     psmisc \
+    tzdata \
     supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -34,10 +35,13 @@ ENV LANG en_US.UTF-8
 # Add user (js)
 ENV USER js
 ENV PASSWORD js
+ENV ROOT true
 
 RUN adduser ${USER} --gecos 'First Last,RoomNumber,WorkPhone,HomePhone' --disabled-password && \
-    sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd' && \
-    usermod -aG sudo ${USER}
+    sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd' 
+    #usermod -aG sudo ${USER}
+
+RUN if [ ${ROOT} = "true" ] ; then usermod -aG sudo ${USER}; fi
 
 
 # Update R -latest version
