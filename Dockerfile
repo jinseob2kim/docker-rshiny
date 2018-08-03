@@ -5,10 +5,6 @@ MAINTAINER Jinseob Kim "jinseob2kim@gmail.com"
 # Setup apt to be happy with no console input
 ENV DEBIAN_FRONTEND noninteractive
 
-# Change repository to korea
-RUN cd /etc/apt && \
-    sed -i 's/archive.ubuntu.com/ftp.daum.net/g' sources.list && \
-    sed -i 's/archive.ubuntu.com/ftp.daum.net/g' sources.list.d/proposed.list
 
 # Install dependencies and Download 
 RUN apt-get update && apt-get install -y \
