@@ -20,6 +20,10 @@ RUN apt-get update && apt-get install -y \
     vim \
     psmisc \
     tzdata \
+    libxml2-dev \
+    libcairo2-dev \
+    libgit2-dev \
+    tk-table \
     supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
