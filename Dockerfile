@@ -36,9 +36,9 @@ ENV LANG en_US.UTF-8
 ENV USER js
 ENV PASSWORD js
 
-RUN adduser $(USER) --gecos 'First Last,RoomNumber,WorkPhone,HomePhone' --disabled-password && \
-    sh -c 'echo $(USER):$(PASSWORD) | sudo chpasswd' && \
-    usermod -aG sudo $(USER)
+RUN adduser ${USER} --gecos 'First Last,RoomNumber,WorkPhone,HomePhone' --disabled-password && \
+    sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd' && \
+    usermod -aG sudo ${USER}
 
 
 # Update R -latest version
@@ -46,7 +46,7 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu bionic-cran35/" | sudo te
     gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9 && \
     gpg -a --export E084DAB9 | sudo apt-key add - && \
     apt-get update && \
-    apt-get install r-base r-base-dev
+    apt-get install -y r-base r-base-dev
 
 # Install Rstudio-server
 ARG RSTUDIO_VERSION
@@ -67,8 +67,8 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     R -e "install.packages(c('DT', 'data.table', 'ggplot2', 'devtools', 'epiDisplay', 'tableone', 'svglite', 'plotROC', 'pROC', 'labelled', 'geepack', 'lme4', 'PredictABEL', 'shinythemes', 'maxstat', 'manhattanly'), repos='https://cran.rstudio.com/')" 
 
 
-RUN sed -i 's/srv\/shiny-server/home\/$(USER)\/ShinyApps/g' /etc/shiny-server/shiny-server.conf && \
-    sed -i 's/var\/log\/shiny-server/home\/$(USER)\/ShinyApps\/log/g' /etc/shiny-server/shiny-server.conf
+RUN sed -i 's/srv\/shiny-server/home\/${USER}\/ShinyApps/g' /etc/shiny-server/shiny-server.conf && \
+    sed -i 's/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g' /etc/shiny-server/shiny-server.conf
     
     
 RUN git clone https://github.com/jinseob2kim/ShinyApps /home/rstudio/ShinyApps
@@ -77,8 +77,8 @@ RUN git clone https://github.com/jinseob2kim/ShinyApps /home/rstudio/ShinyApps
 RUN groupadd shiny-apps && \
     usermod -aG shiny-apps rstudio && \
     usermod -aG shiny-apps shiny && \
-    cd /home/$(USER)/ShinyApps && \
-    chown -R $(USER):shiny-apps . && \
+    cd /home/${USER}/ShinyApps && \
+    chown -R ${USER}:shiny-apps . && \
     chmod g+w . && \
     chmod g+s .
     
