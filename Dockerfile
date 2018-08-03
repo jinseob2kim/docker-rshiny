@@ -18,7 +18,6 @@ RUN apt-get update && apt-get install -y \
     wget \
     gdebi-core \
     vim \
-    r-base \
     psmisc \
     supervisor && \
     apt-get clean && \
