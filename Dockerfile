@@ -24,6 +24,8 @@ RUN apt-get update && apt-get install -y \
     libcairo2-dev \
     libgit2-dev \
     tk-table \
+    libcurl4-gnutls-dev \
+    libssl-dev \
     supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
