@@ -85,7 +85,7 @@ RUN git clone https://github.com/jinseob2kim/ShinyApps /home/${USER}/ShinyApps
 
 ## Permission
 RUN groupadd shiny-apps && \
-    usermod -aG shiny-apps rstudio && \
+    usermod -aG shiny-apps ${USER} && \
     usermod -aG shiny-apps shiny && \
     cd /home/${USER}/ShinyApps && \
     chown -R ${USER}:shiny-apps . && \
