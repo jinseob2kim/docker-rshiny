@@ -41,13 +41,13 @@ ENV LANG en_US.UTF-8
 # Add user (js)
 ENV USER js
 ENV PASSWORD js
-ENV ROOT TRUE
+#ENV ROOT TRUE
 
 RUN adduser ${USER} --gecos 'First Last,RoomNumber,WorkPhone,HomePhone' --disabled-password && \
     sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd' 
-    #usermod -aG sudo ${USER}
+    usermod -aG sudo ${USER}
 
-RUN if [ ${ROOT} = "TRUE" ] ; then usermod -aG sudo ${USER}; fi
+#RUN if [ ${ROOT} = "TRUE" ] ; then usermod -aG sudo ${USER}; fi
 
 
 # Update R -latest version
