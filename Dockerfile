@@ -77,8 +77,8 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     R -e "devtools::install_github(c('jinseob2kim/jstable', 'jinseob2kim/jskm'))"
 
 
-RUN sed -i 's/srv\/shiny-server/home\/${USER}\/ShinyApps/g' /etc/shiny-server/shiny-server.conf && \
-    sed -i 's/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g' /etc/shiny-server/shiny-server.conf
+RUN sed -i "s/srv\/shiny-server/home\/${USER}\/ShinyApps/g" /etc/shiny-server/shiny-server.conf && \
+    sed -i "s/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g" /etc/shiny-server/shiny-server.conf
     
     
 RUN git clone https://github.com/jinseob2kim/ShinyApps /home/${USER}/ShinyApps
