@@ -71,7 +71,7 @@ RUN sed -i 's/srv\/shiny-server/home\/${USER}\/ShinyApps/g' /etc/shiny-server/sh
     sed -i 's/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g' /etc/shiny-server/shiny-server.conf
     
     
-RUN git clone https://github.com/jinseob2kim/ShinyApps /home/rstudio/ShinyApps
+RUN git clone https://github.com/jinseob2kim/ShinyApps /home/${USER}/ShinyApps
 
 ## Permission
 RUN groupadd shiny-apps && \
