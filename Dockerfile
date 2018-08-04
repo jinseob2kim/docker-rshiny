@@ -25,8 +25,7 @@ RUN apt-get update && apt-get install -y \
     libgit2-dev \
     tk-table \
     libcurl4-gnutls-dev \
-    libssl-dev \
-    supervisor && \
+    libssl-dev && \                                    # supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -66,18 +65,36 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     R -e "devtools::install_github(c('jinseob2kim/jstable', 'jinseob2kim/jskm'))"
 
 
-## initial
-COPY ini.sh /etc/ini.sh
-RUN chmod 777 -R /etc/ini.sh
+## configure git not to request password each time
+RUN git config --system credential.helper 'cache --timeout=3600' && \ 
+    git config --system push.default simple \
 
-## Multiple run
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-RUN mkdir -p /var/log/supervisor \
-	&& chmod 777 -R /var/log/supervisor
+
+## Set up S6 init system
+RUN wget -P /tmp/ https://github.com/just-containers/s6-overlay/releases/download/v1.11.0.1/s6-overlay-amd64.tar.gz && \ 
+    tar xzf /tmp/s6-overlay-amd64.tar.gz -C / && \
+    mkdir -p /etc/services.d/rstudio && \
+    echo '#!/usr/bin/with-contenv bash \
+          \n exec /usr/lib/rstudio-server/bin/rserver --server-daemonize 0' \
+          > /etc/services.d/rstudio/run  && \
+    echo '#!/bin/bash \
+          \n rstudio-server stop' \
+          > /etc/services.d/rstudio/finish  && \
+    mkdir -p /etc/services.d/shiny-server && \
+    cd /etc/services.d/shiny-server && \
+    echo '#!/bin/bash' > run && echo 'exec shiny-server' >> run && \
+    chmod +x run && \
+    cd 
+          
+
+
+## initial
+COPY ini.sh /etc/cont-init.d/userconf
+
 
 EXPOSE 8787 3838 
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"] 
+CMD ["/init"]
 
 
 
