@@ -67,7 +67,7 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
 
 ## configure git not to request password each time
 RUN git config --system credential.helper 'cache --timeout=3600' && \ 
-    git config --system push.default simple \
+    git config --system push.default simple 
 
 
 ## Set up S6 init system
