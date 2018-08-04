@@ -1,3 +1,5 @@
+#!/usr/bin/with-contenv bash
+
 ## Set defaults for environmental variables in case they are undefined
 USER=${USER:=js}
 PASSWORD=${PASSWORD:=js}
