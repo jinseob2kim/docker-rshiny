@@ -45,9 +45,11 @@ ENV PASSWORD js
 
 RUN adduser ${USER} --gecos 'First Last,RoomNumber,WorkPhone,HomePhone' --disabled-password && \
     sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd' 
-    usermod -aG sudo ${USER}
+    #usermod -aG sudo ${USER}
+    adduser $USER sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+    
+    
 
-#RUN if [ ${ROOT} = "TRUE" ] ; then usermod -aG sudo ${USER}; fi
 
 
 # Update R -latest version
