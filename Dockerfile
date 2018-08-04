@@ -68,7 +68,7 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
 
 ## initial
 COPY ini.sh /etc/ini.sh
-
+RUN chmod 777 -R /etc/ini.sh
 
 ## Multiple run
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
