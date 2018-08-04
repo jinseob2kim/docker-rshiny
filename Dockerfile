@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y \
     libgit2-dev \
     tk-table \
     libcurl4-gnutls-dev \
-    libssl-dev && \                                    # supervisor && \
+    libssl-dev && \                                    
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
