@@ -44,8 +44,8 @@ ENV PASSWORD js
 #ENV ROOT TRUE
 
 RUN adduser ${USER} --gecos 'First Last,RoomNumber,WorkPhone,HomePhone' --disabled-password && \
-    sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd' 
-    #usermod -aG sudo ${USER}
+    sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd' && \
+    #usermod -aG sudo ${USER} && \
     adduser $USER sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
     
     
