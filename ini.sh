@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bash
+#!/bin/bash
 
 ## Set defaults for environmental variables in case they are undefined
 USER=${USER:=js}
@@ -9,6 +9,7 @@ ROOT=${ROOT:=TRUE}
 ## USER ADD 
 adduser ${USER} --gecos 'First Last,RoomNumber,WorkPhone,HomePhone' --disabled-password 
 sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd' 
+addgroup ${USER} staff
 
 if [ "$ROOT" == "TRUE" ]
   then
@@ -37,3 +38,4 @@ chmod g+w . && \
 chmod g+s .
 
     
+

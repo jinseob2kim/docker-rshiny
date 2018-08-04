@@ -70,6 +70,8 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
 
 
 
+## User setting
+COPY ini.sh /etc/ini.sh
 
 
 ## Multiple run
@@ -80,7 +82,6 @@ RUN mkdir -p /var/log/supervisor \
 EXPOSE 8787 3838 
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"] 
-
 
 
 
