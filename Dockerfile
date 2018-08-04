@@ -1,5 +1,9 @@
 FROM ubuntu:latest
 
+RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && \
+    sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list  && \
+    sed -i 's/extras.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
+
 MAINTAINER Jinseob Kim "jinseob2kim@gmail.com"
 
 # Setup apt to be happy with no console input
