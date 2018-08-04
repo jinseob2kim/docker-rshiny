@@ -69,9 +69,13 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     R -e "devtools::install_github(c('jinseob2kim/jstable', 'jinseob2kim/jskm'))"
 
 
-
 ## User setting
 COPY ini.sh /etc/ini.sh
+
+
+## Github
+RUN git config --system credential.helper 'cache --timeout=3600' && \ 
+    git config --system push.default simple 
 
 
 ## Multiple run
@@ -79,7 +83,9 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN mkdir -p /var/log/supervisor \
 	&& chmod 777 -R /var/log/supervisor
 
+
 EXPOSE 8787 3838 
+
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"] 
 
