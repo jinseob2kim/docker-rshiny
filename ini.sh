@@ -9,12 +9,15 @@ ROOT=${ROOT:=TRUE}
 ## USER ADD 
 adduser ${USER} --gecos 'First Last,RoomNumber,WorkPhone,HomePhone' --disabled-password 
 sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd' 
+
+## Package library: /usr/local/lib/R/site-library
 addgroup ${USER} staff
+
+
 
 if [ "$ROOT" == "TRUE" ]
   then
-    adduser $USER sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-    echo "$USER added to sudoers"
+    usermod -aG sudo ${USER}
 fi    
     
 
