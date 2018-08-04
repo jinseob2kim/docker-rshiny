@@ -38,6 +38,19 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 
 
+# Add user (js)
+ENV USER js
+ENV PASSWORD js
+#ENV ROOT TRUE
+
+RUN adduser ${USER} --gecos 'First Last,RoomNumber,WorkPhone,HomePhone' --disabled-password && \
+    sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd' && \
+    #usermod -aG sudo ${USER} && \
+    adduser $USER sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+    
+    
+
+
 
 # Update R -latest version
 RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu bionic-cran35/" | sudo tee -a /etc/apt/sources.list && \
@@ -66,8 +79,21 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     R -e "devtools::install_github(c('jinseob2kim/jstable', 'jinseob2kim/jskm'))"
 
 
-## initial
-COPY ini.sh /etc/ini.sh
+RUN sed -i "s/srv\/shiny-server/home\/${USER}\/ShinyApps/g" /etc/shiny-server/shiny-server.conf && \
+    sed -i "s/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g" /etc/shiny-server/shiny-server.conf
+    
+    
+RUN git clone https://github.com/jinseob2kim/ShinyApps /home/${USER}/ShinyApps
+
+## Permission
+RUN groupadd shiny-apps && \
+    usermod -aG shiny-apps ${USER} && \
+    usermod -aG shiny-apps shiny && \
+    cd /home/${USER}/ShinyApps && \
+    chown -R ${USER}:shiny-apps . && \
+    chmod g+w . && \
+    chmod g+s .
+    
 
 
 ## Multiple run
