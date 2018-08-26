@@ -30,6 +30,7 @@ RUN apt-get update && apt-get install -y \
     tk-table \
     libcurl4-gnutls-dev \
     libssl-dev \
+    libxt-dev \
     supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -65,7 +66,7 @@ RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubu
     wget --no-verbose "https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-14.04/x86_64/shiny-server-$VERSION-amd64.deb" -O ss-latest.deb && \
     gdebi -n ss-latest.deb && \
     rm -f version.txt ss-latest.deb && \
-    R -e "install.packages(c('shiny', 'rmarkdown', 'DT', 'data.table', 'ggplot2', 'devtools', 'epiDisplay', 'tableone', 'svglite', 'plotROC', 'pROC', 'labelled', 'geepack', 'lme4', 'PredictABEL', 'shinythemes', 'maxstat', 'manhattanly'), repos='https://cran.rstudio.com/')" && \
+    R -e "install.packages(c('shiny', 'rmarkdown', 'DT', 'data.table', 'ggplot2', 'devtools', 'epiDisplay', 'tableone', 'svglite', 'plotROC', 'pROC', 'labelled', 'geepack', 'lme4', 'PredictABEL', 'shinythemes', 'maxstat', 'manhattanly', 'Cairo'), repos='https://cran.rstudio.com/')" && \
     R -e "devtools::install_github(c('jinseob2kim/jstable', 'jinseob2kim/jskm', 'emitanaka/shinycustomloader'))" 
     
 
