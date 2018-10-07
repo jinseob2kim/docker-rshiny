@@ -1,3 +1,7 @@
+## 1.05
+
+* Add **r2d3** package.
+
 ## 1.04 
 
 * Add **pkgdown** package.
