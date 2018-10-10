@@ -1,3 +1,8 @@
+## 1.06
+
+* Add **jsmodule**(unreleased) package.
+
+
 ## 1.05
 
 * Add **r2d3** package.
