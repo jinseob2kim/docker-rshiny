@@ -1,3 +1,8 @@
+## 1.07
+
+* Add **MatchIt** package.
+
+
 ## 1.06
 
 * Add **jsmodule**(unreleased) package.
