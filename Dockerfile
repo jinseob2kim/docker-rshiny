@@ -1,8 +1,8 @@
 FROM ubuntu:18.10
 
-RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && \
-    sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list  && \
-    sed -i 's/extras.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
+#RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && \
+#    sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list  && \
+#    sed -i 's/extras.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 MAINTAINER Jinseob Kim "jinseob2kim@gmail.com"
 
