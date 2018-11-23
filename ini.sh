@@ -27,7 +27,8 @@ sed -i "s/srv\/shiny-server/home\/${USER}\/ShinyApps/g" /etc/shiny-server/shiny-
 sed -i "s/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g" /etc/shiny-server/shiny-server.conf
 
 ## ShinyApps
-git clone https://github.com/jinseob2kim/ShinyApps /home/${USER}/ShinyApps
+#git clone https://github.com/jinseob2kim/ShinyApps /home/${USER}/ShinyApps
+cp -R /srv/shiny-server /home/${USER}/ShinyApps
 chmod -R 777 /home/${USER}/ShinyApps
 
 
