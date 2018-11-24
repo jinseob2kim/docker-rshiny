@@ -1,3 +1,7 @@
+## 1.09
+
+* Add **radix** and **lubridate** packages.
+
 ## 1.08
 
 * Upgrade ubuntu to 18.10.
