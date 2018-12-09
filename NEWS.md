@@ -1,3 +1,7 @@
+## 1.10
+
+* Add **testthat** packages
+
 ## 1.09
 
 * Add **radix** and **lubridate** packages.
