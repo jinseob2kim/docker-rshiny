@@ -1,3 +1,7 @@
+## 1.11
+
+* Add **rversions, spelling, rhub** packages for cran release.
+
 ## 1.10
 
 * Add **testthat** packages
