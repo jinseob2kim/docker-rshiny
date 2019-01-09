@@ -1,3 +1,9 @@
+## 1.12
+
+* Add **xaringan** package to make presentation.
+
+* Add **remotes** pacakge and change `devtools::` to `remotes::` when installing github packages.
+
 ## 1.11
 
 * Add **rversions, spelling, rhub** packages for cran release.
