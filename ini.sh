@@ -14,7 +14,6 @@ sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd'
 addgroup ${USER} staff
 
 
-
 if [ "$ROOT" == "TRUE" ]
   then
     usermod -aG sudo ${USER}
