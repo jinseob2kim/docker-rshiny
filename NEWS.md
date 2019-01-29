@@ -1,3 +1,7 @@
+## 1.13
+
+* Add **ggpmisc** package for peak selection.
+
 ## 1.12
 
 * Add **xaringan** package to make presentation.
