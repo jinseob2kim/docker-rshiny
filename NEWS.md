@@ -1,3 +1,7 @@
+## 1.14
+
+* Add **qpdf** from ubuntu repository: for R package development.
+
 ## 1.13
 
 * Add **ggpmisc** package for peak selection.

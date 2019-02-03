@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y \
     libcurl4-gnutls-dev \
     libssl-dev \
     libxt-dev \
+    qpdf \
     supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
