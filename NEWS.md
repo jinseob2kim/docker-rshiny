@@ -1,3 +1,8 @@
+## 1.15
+
+* Add **RefManageR** package to manage references in **xaringan**.
+
+
 ## 1.14
 
 * Add **qpdf** from ubuntu repository: for R package development.
