@@ -17,7 +17,7 @@ docker image for rstudio &amp; shiny server : original
 Docker image: https://hub.docker.com/r/jinseob2kim/docker-rshiny/
 
 
-I add some useful packaes for shiny: **DT, data.table, ggplot2, devtools, epiDisplay, tableone, svglite, plotROC, pROC, labelled, geepack, lme4, PredictABEL, shinythemes, maxstat, plotly, manhattanly, shinycustomloader, Cairo, future, promises, shiny.i18n, GGally, fst, blogdown, metafor, roxygen2, sinew, pkgdown, r2d3, jsmodule, MatchIt, radix, lubridate, testthat, rversions, spelling, rhub, xaringan, remotes, ggpmisc, RefManageR**
+I add some useful packaes for shiny: **DT, data.table, ggplot2, devtools, epiDisplay, tableone, svglite, plotROC, pROC, labelled, geepack, lme4, PredictABEL, shinythemes, maxstat, plotly, manhattanly, shinycustomloader, Cairo, future, promises, shiny.i18n, GGally, fst, blogdown, metafor, roxygen2, sinew, pkgdown, r2d3, jsmodule, MatchIt, radix, lubridate, testthat, rversions, spelling, rhub, xaringan, remotes, ggpmisc, RefManageR, tidyr**
 
 
 ## Image download & run

@@ -1,3 +1,7 @@
+## 1.16 
+
+* Add **tidyr** package to manage nested data.
+
 ## 1.15
 
 * Add **RefManageR** package to manage references in **xaringan**.
