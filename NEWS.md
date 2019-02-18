@@ -1,3 +1,7 @@
+## 1.17
+
+* Add **shinytest** packages to test shinyapps.
+
 ## 1.16 
 
 * Add **tidyr** package to manage nested data.
