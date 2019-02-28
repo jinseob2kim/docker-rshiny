@@ -1,3 +1,7 @@
+## 1.18
+
+* Add **ggpubr** and **kableExtra** packages to write `Rmd` documents.
+
 ## 1.17
 
 * Add **shinytest** packages to test shinyapps.
