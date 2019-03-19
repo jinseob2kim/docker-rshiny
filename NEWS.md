@@ -1,3 +1,7 @@
+## 1.19 
+
+* Add **survivalROC** package.
+
 ## 1.18
 
 * Add **ggpubr** and **kableExtra** packages to write `Rmd` documents.
