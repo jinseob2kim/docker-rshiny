@@ -1,6 +1,6 @@
 ## 1.19 
 
-* Add **survivalROC** package.
+* Add **timeROC** package.
 
 ## 1.18
 
