@@ -1,3 +1,7 @@
+## 1.20
+
+* Add **survC1, survIDINRI** package for time-dependent NRI, IDI analysis.
+
 ## 1.19 
 
 * Add **timeROC** package.
