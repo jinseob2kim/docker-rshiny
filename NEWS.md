@@ -1,3 +1,7 @@
+## 1.21
+
+* Add **colourpicker, shinyWidgets** packages for shiny input.
+
 ## 1.20
 
 * Add **survC1, survIDINRI** package for time-dependent NRI, IDI analysis.
