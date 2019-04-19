@@ -1,3 +1,7 @@
+## 1.22
+
+* Ubuntu upgrade: 19.04
+
 ## 1.21
 
 * Add **colourpicker, shinyWidgets** packages for shiny input.
