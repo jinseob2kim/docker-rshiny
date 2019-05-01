@@ -1,4 +1,4 @@
-FROM ubuntu:19.04
+FROM ubuntu:18.10
 
 #RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && \
 #    sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list  && \
@@ -46,12 +46,11 @@ ENV LANG en_US.UTF-8
 
 
 # Update R -latest version
-#RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu disco-cran35/" | sudo tee -a /etc/apt/sources.list && \
-#    gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9 && \
-#    gpg -a --export E084DAB9 | sudo apt-key add - && \
-#    apt-get update && \
-#    apt-get install -y r-base r-base-dev
-RUN apt-get install -y r-base r-base-dev
+RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu cosmic-cran35/" | sudo tee -a /etc/apt/sources.list && \
+    gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9 && \
+    gpg -a --export E084DAB9 | sudo apt-key add - && \
+    apt-get update && \
+    apt-get install -y r-base r-base-dev
 
 
 # Install Rstudio-server
