@@ -51,6 +51,8 @@ ENV LANG en_US.UTF-8
 #    gpg -a --export E084DAB9 | sudo apt-key add - && \
 #    apt-get update && \
 #    apt-get install -y r-base r-base-dev
+RUN apt-get install -y r-base r-base-dev
+
 
 # Install Rstudio-server
 
