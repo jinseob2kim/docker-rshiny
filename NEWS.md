@@ -1,3 +1,7 @@
+## 1.23
+
+* Add **devEMF** package to download `emf` format plot.
+
 ## 1.22
 
 * Ubuntu upgrade: 19.04
