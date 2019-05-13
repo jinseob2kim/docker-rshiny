@@ -1,3 +1,7 @@
+## 1.24
+
+* Change **radix** package to **distill**
+
 ## 1.23
 
 * Add **devEMF** package to download `emf` format plot.
