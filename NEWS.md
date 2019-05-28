@@ -1,3 +1,7 @@
+## 1.25
+
+* Add [see](https://github.com/easystats/see) package to get some `ggplot` options
+
 ## 1.24
 
 * Change **radix** package to **distill**
