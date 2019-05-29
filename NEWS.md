@@ -1,3 +1,8 @@
+## 1.26
+
+* Add [aws.s3](https://github.com/cloudyr/aws.s3) package to acces **AWS S3**.
+
+
 ## 1.25
 
 * Add [see](https://github.com/easystats/see) package to get some `ggplot` options
