@@ -1,6 +1,10 @@
+## 1.27
+
+* Add [epiR](https://cran.r-project.org/package=epiR) package to get 95% CI of diagnostic statistics
+
 ## 1.26
 
-* Add [aws.s3](https://github.com/cloudyr/aws.s3) package to acces **AWS S3**.
+* Add [aws.s3](https://github.com/cloudyr/aws.s3) package to access **AWS S3**.
 
 
 ## 1.25
