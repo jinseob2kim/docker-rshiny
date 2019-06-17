@@ -1,3 +1,8 @@
+## 1.28
+
+* Add [zip](https://cran.r-project.org/package=zip) package to unzip in shiny server.
+
+
 ## 1.27
 
 * Add [epiR](https://cran.r-project.org/package=epiR) package to get 95% CI of diagnostic statistics
