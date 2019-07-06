@@ -1,3 +1,7 @@
+## 1.29
+
+* Bug fixes: Apply Ubuntu 18+ `RStudio Server`.
+
 ## 1.28
 
 * Add [zip](https://cran.r-project.org/package=zip) package to unzip in shiny server.

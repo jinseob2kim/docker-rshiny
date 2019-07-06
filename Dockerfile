@@ -63,7 +63,7 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu disco-cran35/" | sudo tee
 #    dpkg -i rstudio-server-${RSTUDIO_VERSION}-amd64.deb && \
 #    rm rstudio-server-*-amd64.deb 
 
-RUN wget -q https://download2.rstudio.org/server/trusty/amd64/rstudio-server-1.2.1335-amd64.deb && \
+RUN wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.1335-amd64.deb && \
     dpkg -i rstudio-server-1.2.1335-amd64.deb && \
     rm rstudio-server-*-amd64.deb 
     
