@@ -1,3 +1,7 @@
+## 1.30
+
+* Add [shinymanager](https://CRAN.R-project.org/package=shinymanager), [keyring](https://CRAN.R-project.org/package=keyring) packages for authentification.
+
 ## 1.29
 
 * Bug fixes: Apply Ubuntu 18+ `RStudio Server`.
