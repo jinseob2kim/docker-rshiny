@@ -1,3 +1,9 @@
+## 1.31
+
+* ADD [kappaSize](https://CRAN.R-project.org/package=kappaSize) package for kappa based sample size calculation.
+
+* ADD [anicon](https://github.com/emitanaka/anicon) package for easy insertion of animated [font awesome](https://fontawesome.com) or [academicons](https://jpswalsh.github.io/academicons/) icons into R markdown or Shiny.
+
 ## 1.30
 
 * Add [shinymanager](https://CRAN.R-project.org/package=shinymanager), [keyring](https://CRAN.R-project.org/package=keyring) packages for authentification.
