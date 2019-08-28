@@ -1,6 +1,6 @@
 ## 1.31
 
-* ADD [kappaSize](https://CRAN.R-project.org/package=kappaSize) package for kappa based sample size calculation.
+* ADD [irr](https://CRAN.R-project.org/package=irr) [kappaSize](https://CRAN.R-project.org/package=kappaSize) packages for kappa & kappa based sample size calculation.
 
 * ADD [anicon](https://github.com/emitanaka/anicon) package for easy insertion of animated [font awesome](https://fontawesome.com) or [academicons](https://jpswalsh.github.io/academicons/) icons into R markdown or Shiny.
 
