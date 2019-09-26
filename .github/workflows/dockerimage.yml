@@ -11,4 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag jinseob2kim/docker-rshiny:$(date +%s)
+      run: docker build . --file Dockerfile --tag docker.pkg.github.com/jinseob2kim/docker-rshiny/docker-rshiny:githubactions
+    - name: Push Docker image to Github package registry
+      run: docker.pkg.github.com/jinseob2kim/docker-rshiny/docker-rshiny:githubactions
