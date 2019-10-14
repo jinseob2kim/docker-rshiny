@@ -1,3 +1,7 @@
+## 1.32
+
+* Update RStudio version to latest
+
 ## 1.31
 
 * ADD [irr](https://CRAN.R-project.org/package=irr) [kappaSize](https://CRAN.R-project.org/package=kappaSize) packages for kappa & kappa based sample size calculation.
