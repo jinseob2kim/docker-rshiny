@@ -1,3 +1,8 @@
+## 1.33
+
+* Update Ubuntu to 19.10
+
+
 ## 1.32
 
 * Update RStudio version to latest
