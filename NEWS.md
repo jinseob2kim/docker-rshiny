@@ -1,3 +1,7 @@
+## 1.34
+
+* Add [gsDesign](https://CRAN.R-project.org/package=gsDesign) package for sample size calculation with survival analysis
+
 ## 1.33
 
 * Update Ubuntu to 19.10
