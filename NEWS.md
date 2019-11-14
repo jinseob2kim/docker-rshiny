@@ -1,3 +1,8 @@
+## 1.35
+
+* Add [jtools](https://CRAN.R-project.org/package=jtools), [svydiags](https://CRAN.R-project.org/package=svydiags)  packages to analyze multi-collinearity in complex survey design
+
+
 ## 1.34
 
 * Add [gsDesign](https://CRAN.R-project.org/package=gsDesign) package for sample size calculation with survival analysis
