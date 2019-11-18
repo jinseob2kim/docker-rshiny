@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Login to Github package registry
-      run: docker login docker.pkg.github.com -u jinseob2kim -p 7c7070403e15703400559d99d405c5644e47384c
+      run: docker login docker.pkg.github.com -u jinseob2kim -p $secrets.GITHUB_TOKEN
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag docker.pkg.github.com/jinseob2kim/docker-rshiny/docker-rshiny:githubactions
     - name: Push Docker image to Github package registry
