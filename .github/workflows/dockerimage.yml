@@ -10,9 +10,9 @@ jobs:
  
     steps:
     - uses: actions/checkout@v1
-    - name: Login to Github package registry
-      run: echo $secrets.GITHUB_TOKEN | docker login docker.pkg.github.com -u jinseob2kim --password-stdin
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag docker.pkg.github.com/jinseob2kim/docker-rshiny/docker-rshiny:githubactions
+    - name: Login to Github package registry
+      run: echo $secrets.GITHUB_TOKEN | docker login docker.pkg.github.com -u jinseob2kim --password-stdin
     - name: Push Docker image to Github package registry
       run: docker push docker.pkg.github.com/jinseob2kim/docker-rshiny/docker-rshiny:githubactions
