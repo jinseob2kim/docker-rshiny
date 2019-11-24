@@ -1,3 +1,7 @@
+## 1.36
+
+* Upgrade RStudio server to 1.2.5019.
+
 ## 1.35
 
 * Add [jtools](https://CRAN.R-project.org/package=jtools), [svydiags](https://CRAN.R-project.org/package=svydiags)  packages to analyze multi-collinearity in complex survey design
