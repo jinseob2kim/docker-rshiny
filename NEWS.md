@@ -1,3 +1,7 @@
+## 1.38
+
+* Upgrade RStudio server to the latest.
+
 ## 1.37
 
 * Add Add [shinyBS](https://CRAN.R-project.org/package=shinyBS) package for shiny customization.

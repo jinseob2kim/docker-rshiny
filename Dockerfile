@@ -56,16 +56,16 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu disco-cran35/" | sudo tee
 # Install Rstudio-server
 
 #ARG RSTUDIO_VERSION
-#
-#RUN RSTUDIO_LATEST=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/rstudio-server/current.ver) && \ 
-#    [ -z "$RSTUDIO_VERSION" ] && RSTUDIO_VERSION=$RSTUDIO_LATEST || true && \
-#    wget -q http://download2.rstudio.org/rstudio-server-${RSTUDIO_VERSION}-amd64.deb && \
-#    dpkg -i rstudio-server-${RSTUDIO_VERSION}-amd64.deb && \
-#    rm rstudio-server-*-amd64.deb 
 
-RUN wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5019-amd64.deb && \
-    dpkg -i rstudio-server-1.2.5019-amd64.deb && \
+RUN RSTUDIO_LATEST=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/rstudio-server/current.ver) && \ 
+    [ -z "$RSTUDIO_VERSION" ] && RSTUDIO_VERSION=$(awk -F- '{print $1}' <<< $RSTUDIO_LATEST) || true && \
+    wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-${RSTUDIO_VERSION}-amd64.deb && \
+    dpkg -i rstudio-server-${RSTUDIO_VERSION}-amd64.deb && \
     rm rstudio-server-*-amd64.deb 
+
+#RUN wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5019-amd64.deb && \
+#    dpkg -i rstudio-server-1.2.5019-amd64.deb && \
+#    rm rstudio-server-*-amd64.deb 
     
 
 # Install Shiny server
