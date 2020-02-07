@@ -58,7 +58,7 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu disco-cran35/" | sudo tee
 #ARG RSTUDIO_VERSION
 
 RUN RSTUDIO_LATEST=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/rstudio-server/current.ver) && \ 
-    RSTUDIO_VERSION=${RSTUDIO_LATEST//-1/} && \
+    RSTUDIO_VERSION=${RSTUDIO_LATEST%-*} && \
     wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-${RSTUDIO_VERSION}-amd64.deb && \
     dpkg -i rstudio-server-${RSTUDIO_VERSION}-amd64.deb && \
     rm rstudio-server-*-amd64.deb 
