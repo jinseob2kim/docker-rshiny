@@ -3,16 +3,14 @@ name: DockerImageCI
 on: [push]
 
 jobs:
-
-  build:
- 
+ build:
     runs-on: ubuntu-latest
  
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag docker.pkg.github.com/jinseob2kim/docker-rshiny/docker-rshiny:1.36
+      run: docker build . --file Dockerfile --tag docker.pkg.github.com/jinseob2kim/docker-rshiny/docker-rshiny:githubactions
     - name: Login to Github package registry
-      run: echo $secrets.GITHUB_TOKEN | docker login docker.pkg.github.com -u jinseob2kim --password-stdin
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
     - name: Push Docker image to Github package registry
-      run: docker push docker.pkg.github.com/jinseob2kim/docker-rshiny/docker-rshiny:1.36
+      run: docker push docker.pkg.github.com/jinseob2kim/docker-rshiny/docker-rshiny:githubactions
