@@ -24,11 +24,16 @@ fi
 ## Shiny-server setting
 sed -i "s/srv\/shiny-server/home\/${USER}\/ShinyApps/g" /etc/shiny-server/shiny-server.conf 
 sed -i "s/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g" /etc/shiny-server/shiny-server.conf
+sed -i "s/shiny\;/${USER}\;/g" /etc/shiny-server/shiny-server.conf
+
 
 ## ShinyApps
 #git clone https://github.com/jinseob2kim/ShinyApps /home/${USER}/ShinyApps
 cp -R /srv/shiny-server /home/${USER}/ShinyApps
 chmod -R 777 /home/${USER}/ShinyApps
+
+## 'shiny' user encoding
+echo -e LANG=en_US.UTF-8 > /home/shiny/.Renviron
 
 
 ## Permission

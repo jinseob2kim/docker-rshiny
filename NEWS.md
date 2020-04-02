@@ -1,3 +1,11 @@
+## 1.40
+
+* Add [highcharter](https://CRAN.R-project.org/package=highcharter) package for interactive plot.
+
+* `shiny` user encoding setting for shiny server.
+
+* Set shiny server user from `shiny` to USER ID
+
 ## 1.38
 
 * Upgrade RStudio server to the latest.
