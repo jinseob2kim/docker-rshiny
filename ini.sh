@@ -32,8 +32,9 @@ sed -i "s/shiny\;/${USER}\;/g" /etc/shiny-server/shiny-server.conf
 cp -R /srv/shiny-server /home/${USER}/ShinyApps
 chmod -R 777 /home/${USER}/ShinyApps
 
-## 'shiny' user encoding
+## Encoding
 echo -e LANG=en_US.UTF-8 > /home/shiny/.Renviron
+echo -e LANG=en_US.UTF-8 > /home/${USER}/.Renviron
 
 
 ## Permission
