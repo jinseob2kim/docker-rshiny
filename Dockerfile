@@ -63,10 +63,6 @@ RUN RSTUDIO_LATEST=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/r
     dpkg -i rstudio-server-${RSTUDIO_VERSION}-amd64.deb && \
     rm rstudio-server-*-amd64.deb 
 
-#RUN wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5019-amd64.deb && \
-#    dpkg -i rstudio-server-1.2.5019-amd64.deb && \
-#    rm rstudio-server-*-amd64.deb 
-    
 
 # Install Shiny server
 RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-14.04/x86_64/VERSION -O "version.txt" && \
