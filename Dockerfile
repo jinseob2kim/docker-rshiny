@@ -46,7 +46,7 @@ ENV LANG en_US.UTF-8
 
 
 # Update R -latest version
-RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu disco-cran35/" | sudo tee -a /etc/apt/sources.list && \
+RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu eoan-cran35/" | sudo tee -a /etc/apt/sources.list && \
     gpg --keyserver keyserver.ubuntu.com --recv-key 51716619E084DAB9 && \
     gpg -a --export 51716619E084DAB9 | sudo apt-key add - && \
     apt-get update && \
