@@ -2,6 +2,8 @@
 
 * Change ubuntu:19.10 to **ubuntu:latest**
 
+* Apply **R 4.0.0**
+
 ## 1.40
 
 * Add [highcharter](https://CRAN.R-project.org/package=highcharter) package for interactive plot.
