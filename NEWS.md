@@ -1,3 +1,9 @@
+## 1.42
+
+* Add package [forestplot](https://CRAN.R-project.org/package=forestplot) packages for forest plot
+
+* Add package [qgraph](https://CRAN.R-project.org/package=qgraph), [bootnet](https://CRAN.R-project.org/package=bootnet) for network analysis.
+
 ## 1.41
 
 * Change ubuntu:19.10 to **ubuntu:latest**
