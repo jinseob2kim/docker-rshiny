@@ -19,7 +19,7 @@ docker image for rstudio &amp; shiny server : original
 Docker image: https://cloud.docker.com/u/jinseob2kim/repository/docker/jinseob2kim/docker-rshiny
 
 
-I add some useful packaes for shiny: **DT, data.table, ggplot2, devtools, epiDisplay, tableone, svglite, plotROC, pROC, labelled, geepack, lme4, PredictABEL, shinythemes, maxstat, plotly, manhattanly, shinycustomloader, Cairo, future, promises, shiny.i18n, GGally, fst, blogdown, metafor, roxygen2, sinew, pkgdown, r2d3, jsmodule, MatchIt, distill, lubridate, testthat, rversions, spelling, rhub, xaringan, remotes, ggpmisc, RefManageR, tidyr, shinytest, ggpubr, kableExtra, timeROC, survC1, survIDINRI, colourpicker, shinyWidgets, devEMF, see, aws.s3, epiR, zip, keyring, shinymanager, kappaSize, irr, anicon, gsDesign, jtools, svydiags, shinyBS, forestplot, qgraph, bootnet**
+I add some useful packaes for shiny: **DT, data.table, ggplot2, devtools, epiDisplay, tableone, svglite, plotROC, pROC, labelled, geepack, lme4, PredictABEL, shinythemes, maxstat, plotly, manhattanly, shinycustomloader, Cairo, future, promises, shiny.i18n, GGally, fst, blogdown, metafor, roxygen2, sinew, pkgdown, r2d3, jsmodule, MatchIt, distill, lubridate, testthat, rversions, spelling, rhub, xaringan, remotes, ggpmisc, RefManageR, tidyr, shinytest, ggpubr, kableExtra, timeROC, survC1, survIDINRI, colourpicker, shinyWidgets, devEMF, see, aws.s3, epiR, zip, keyring, shinymanager, kappaSize, irr, anicon, gsDesign, jtools, svydiags, shinyBS, forestplot, qgraph, bootnet, rhandsontable, meta, showtext**
 
 
 ## Image download & run

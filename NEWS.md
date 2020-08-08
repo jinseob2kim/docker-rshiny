@@ -1,3 +1,10 @@
+## 1.45
+
+* Add package [rhandsontable](https://CRAN.R-project.org/package=rhandsontable), [meta](https://CRAN.R-project.org/package=meta) for meta-analysis
+
+* Add **Nanum font**, package [showtext](https://CRAN.R-project.org/package=showtext) for hangul
+
+
 ## 1.42
 
 * Add package [forestplot](https://CRAN.R-project.org/package=forestplot) packages for forest plot
