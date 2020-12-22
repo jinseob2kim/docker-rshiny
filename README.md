@@ -27,11 +27,7 @@ Assume local user: username **js**, password **js**
 
 
 ```shell
-docker run --rm -d -p 3838:3838 -p 8787:8787 \
-    -e USER=js -e PASSWORD=js -e ROOT=TRUE\
-    -v $(pwd):/home/js \ 
-    jinseob2kim/docker-rshiny
-
+docker run -d -p 3838:3838 -p 8787:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -v $(pwd):/home/js jinseob2kim/docker-rshiny
 ```
 
 Default shinyapps directory is `/home/js/ShinyApps`
