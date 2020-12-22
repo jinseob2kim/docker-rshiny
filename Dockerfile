@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:latest
 
 #RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && \
 #    sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list  && \
@@ -47,7 +47,7 @@ ENV LANG en_US.UTF-8
 
 
 # Update R -latest version
-RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu focal-cran40/" | sudo tee -a /etc/apt/sources.list && \
+RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu $(lsb_release -cs)-cran40/" | sudo tee -a /etc/apt/sources.list && \
     gpg --keyserver keyserver.ubuntu.com --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9 && \
     gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add - && \
     apt-get update && \
