@@ -1,6 +1,7 @@
 ## 1.46
 
-* Apply rJava
+* Add package [rJava](https://CRAN.R-project.org/package=rJava), [officer](https://CRAN.R-project.org/package=officer), [rvg](https://CRAN.R-project.org/package=rvg) 
+
 
 ## 1.45
 
