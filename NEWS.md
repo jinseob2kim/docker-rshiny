@@ -1,3 +1,7 @@
+## 1.46
+
+* Apply rJava
+
 ## 1.45
 
 * Add package [rhandsontable](https://CRAN.R-project.org/package=rhandsontable), [meta](https://CRAN.R-project.org/package=meta) for meta-analysis

@@ -54,6 +54,15 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu $(lsb_release -cs)-cran40
     apt-get update && \
     apt-get install -y r-base r-base-dev
 
+# For rJava
+RUN apt-get update && apt-get install -y \
+    default-jdk libbz2-dev libicu-dev liblzma-dev && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* && \
+    sudo R CMD javareconf && \
+    R -e "install.packages('rJava')"
+
+
 # Install Rstudio-server
 
 #ARG RSTUDIO_VERSION
