@@ -26,22 +26,20 @@ I add some useful packaes for shiny: **DT, data.table, ggplot2, devtools, epiDis
 ## Image download & run
 Assume local user: username **js**, password **js**
 
-### GitHub Package Registry
-
-```shell
-docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -v $(pwd):/home/js ghcr.io/jinseob2kim/docker-rshiny/docker-rshiny
-```
-
-
 ### Dockerhub
 
 ```shell
 docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -v $(pwd):/home/js jinseob2kim/docker-rshiny
 ```
 
+
+### GitHub Package Registry
+
+```shell
+docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -v $(pwd):/home/js ghcr.io/jinseob2kim/docker-rshiny
+```
+
 Default shinyapps directory is `/home/js/ShinyApps`
-
-
 
 ## Run (2222- rstudio server, 1111- shiny server)
 
