@@ -29,7 +29,7 @@ Assume local user: username **js**, password **js**
 ### GitHub Package Registry
 
 ```shell
-docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -v $(pwd):/home/js ghcr.io/jinseob2kim/docker-rshiny/docker-rshiny:githubactions
+docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -v $(pwd):/home/js ghcr.io/jinseob2kim/docker-rshiny/docker-rshiny
 ```
 
 
