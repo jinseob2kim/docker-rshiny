@@ -49,6 +49,6 @@ Default shinyapps directory is `/home/js/ShinyApps`
 2. Server : **Your IP**:2222, **Your IP**:1111
 
 ### PERUSER=TRUE
-1. Local cumputer : http://localhost:2222/{USERNAME}, http://localhost:1111/{USERNAME},
+1. Local cumputer : http://localhost:2222/{USERNAME}/, http://localhost:1111/{USERNAME}/,
 
-2. Server : **Your IP**:2222/{USERNAME}, **Your IP**:1111/{USERNAME}
+2. Server : **Your IP**:2222/{USERNAME}/, **Your IP**:1111/{USERNAME}/
