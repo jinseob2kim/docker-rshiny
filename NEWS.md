@@ -1,3 +1,7 @@
+## 1.50
+
+* Add **PERUSER** option. When **PERUSER=TRUE**, users can see their own shiny-server at IP/{USERNAME}:3838 
+
 ## 1.46
 
 * Add package [rJava](https://CRAN.R-project.org/package=rJava), [officer](https://CRAN.R-project.org/package=officer), [rvg](https://CRAN.R-project.org/package=rvg) 
