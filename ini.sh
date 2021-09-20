@@ -16,6 +16,7 @@ addgroup ${USER} staff
 
 if [ "$ROOT" == "TRUE" ]; then
     usermod -aG sudo ${USER}
+fi
 
 ## Shiny-server setting
 if [ "$PERUSER" != "TRUE" ]; then
