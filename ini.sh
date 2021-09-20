@@ -4,7 +4,7 @@
 USER=${USER:=js}
 PASSWORD=${PASSWORD:=js}
 ROOT=${ROOT:=TRUE}
-
+PERUSER=${PERUSER:=FALSE}
 
 ## USER ADD 
 adduser ${USER} --gecos 'First Last,RoomNumber,WorkPhone,HomePhone' --disabled-password 
@@ -17,15 +17,20 @@ addgroup ${USER} staff
 if [ "$ROOT" == "TRUE" ]
   then
     usermod -aG sudo ${USER}
-fi    
-    
-
 
 ## Shiny-server setting
-sed -i "s/srv\/shiny-server/home\/${USER}\/ShinyApps/g" /etc/shiny-server/shiny-server.conf 
-sed -i "s/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g" /etc/shiny-server/shiny-server.conf
-sed -i "s/shiny\;/${USER}\;/g" /etc/shiny-server/shiny-server.conf
+if [ "$PERUSER" != "TRUE" ]
+  then
+    sed -i "s/srv\/shiny-server/home\/${USER}\/ShinyApps/g" /etc/shiny-server/shiny-server.conf 
+    sed -i "s/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g" /etc/shiny-server/shiny-server.conf
+    sed -i "s/shiny\;/${USER}\;/g" /etc/shiny-server/shiny-server.conf
 
+else
+  then
+    sed -i "/^log_dir/d" /etc/shiny-server/shiny-server.conf
+  
+
+fi
 
 ## ShinyApps
 #git clone https://github.com/jinseob2kim/ShinyApps /home/${USER}/ShinyApps
