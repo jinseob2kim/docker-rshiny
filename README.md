@@ -29,21 +29,26 @@ Assume local user: username **js**, password **js**
 ### Dockerhub
 
 ```shell
-docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -v $(pwd):/home/js jinseob2kim/docker-rshiny
+docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -e PERUSER=FALSE -v $(pwd):/home/js jinseob2kim/docker-rshiny
 ```
 
 
 ### GitHub Package Registry
 
 ```shell
-docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -v $(pwd):/home/js ghcr.io/jinseob2kim/docker-rshiny
+docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -e PERUSER=FALSE -v $(pwd):/home/js ghcr.io/jinseob2kim/docker-rshiny
 ```
 
 Default shinyapps directory is `/home/js/ShinyApps`
 
 ## Run (2222- rstudio server, 1111- shiny server)
+### PERUSER=FALSE
 
 1. Local cumputer : http://localhost:2222, http://localhost:1111,
 
-
 2. Server : **Your IP**:2222, **Your IP**:1111
+
+### PERUSER=TRUE
+1. Local cumputer : http://localhost/{USERNAME}:2222, http://localhost/{USERNAME}:1111,
+
+2. Server : **Your IP**/{USERNAME}:2222, **Your IP**/{USERNAME}:1111
