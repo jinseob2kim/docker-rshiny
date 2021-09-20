@@ -2,7 +2,7 @@
 docker image for rstudio &amp; shiny server : original
 
 [![GitHub workflows](https://github.com/jinseob2kim/docker-rshiny/workflows/DockerImageCI/badge.svg)](https://github.com/jinseob2kim/docker-rshiny/actions)
-[![Docker MicroBadger Size & Layer](https://images.microbadger.com/badges/image/jinseob2kim/docker-rshiny.svg)](https://microbadger.com/images/jinseob2kim/docker-rshiny)
+[![Docker Build Status](https://img.shields.io/docker/build/jinseob2kim/docker-rshiny.svg)](https://hub.docker.com/r/jinseob2kim/docker-rshiny/builds)
 [![Docker stars](https://img.shields.io/docker/stars/jinseob2kim/docker-rshiny.svg)](https://hub.docker.com/r/jinseob2kim/docker-rshiny/)
 [![Docker pulls](https://img.shields.io/docker/pulls/jinseob2kim/docker-rshiny.svg)](https://hub.docker.com/r/jinseob2kim/docker-rshiny/)
 [![GitHub issues](https://img.shields.io/github/issues/jinseob2kim/docker-rshiny.svg)](https://github.com/jinseob2kim/docker-rshiny/issues)
