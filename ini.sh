@@ -27,7 +27,7 @@ if [ "$PERUSER" != "TRUE" ]
 else
   then
     sed -i "/log_dir/d" /etc/shiny-server/shiny-server.conf
-    sed -i "/site_dir/ c\    user_dir\;" /etc/shiny-server/shiny-server.conf
+    sed -i "/site_dir/ c\    user_dirs\;" /etc/shiny-server/shiny-server.conf
     sed -i "s/shiny\;/:HOME_USER:\;/g" /etc/shiny-server/shiny-server.conf
 fi
 
