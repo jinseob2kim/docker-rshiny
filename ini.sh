@@ -24,12 +24,11 @@ if [ "$PERUSER" != "TRUE" ]
     sed -i "s/srv\/shiny-server/home\/${USER}\/ShinyApps/g" /etc/shiny-server/shiny-server.conf 
     sed -i "s/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g" /etc/shiny-server/shiny-server.conf
     sed -i "s/shiny\;/${USER}\;/g" /etc/shiny-server/shiny-server.conf
-
 else
   then
-    sed -i "/^log_dir/d" /etc/shiny-server/shiny-server.conf
-  
-
+    sed -i "/log_dir/d" /etc/shiny-server/shiny-server.conf
+    sed -i "/site_dir/ c\    user_dir\;" /etc/shiny-server/shiny-server.conf
+    sed -i "s/shiny\;/:HOME_USER:\;/g" /etc/shiny-server/shiny-server.conf
 fi
 
 ## ShinyApps
