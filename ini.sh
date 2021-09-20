@@ -14,8 +14,7 @@ sh -c 'echo ${USER}:${PASSWORD} | sudo chpasswd'
 addgroup ${USER} staff
 
 
-if [ "$ROOT" == "TRUE" ]
-  then
+if [ "$ROOT" == "TRUE" ]; then
     usermod -aG sudo ${USER}
 
 ## Shiny-server setting
