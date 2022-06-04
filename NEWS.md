@@ -1,3 +1,8 @@
+## 1.52
+
+* Apply latest Rstudio-server
+
+
 ## 1.50
 
 * Add **PERUSER** option. When **PERUSER=TRUE**, users can see their own shiny-server at IP:3838/{USERNAME}/ 

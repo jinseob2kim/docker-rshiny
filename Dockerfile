@@ -68,8 +68,8 @@ RUN apt-get update && apt-get install -y \
 #ARG RSTUDIO_VERSION
 
 RUN RSTUDIO_LATEST=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/rstudio-server/current.ver) && \
-    [ -z "$RSTUDIO_VERSION" ] && RSTUDIO_VERSION=${RSTUDIO_LATEST%-*} || true && \
-    wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-${RSTUDIO_VERSION}-amd64.deb && \
+    [ -z "$RSTUDIO_VERSION" ] && RSTUDIO_VERSION=${RSTUDIO_LATEST%.*} || true && \
+    wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-${RSTUDIO_VERSION/+/-}-amd64.deb && \
     dpkg -i rstudio-server-${RSTUDIO_VERSION}-amd64.deb && \
     rm rstudio-server-*-amd64.deb 
 
