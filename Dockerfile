@@ -31,6 +31,9 @@ RUN apt-get update && apt-get install -y \
     tk-table \
     libcurl4-gnutls-dev \
     libssl-dev \
+    libssl1.1 \
+    libssl1.0.2 \
+    libssl1.0.0 \
     libxt-dev \
     qpdf \
     fonts-nanum \
