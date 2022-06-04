@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:focal
 
 #RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && \
 #    sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list  && \
@@ -69,8 +69,9 @@ RUN apt-get update && apt-get install -y \
 
 #RUN RSTUDIO_LATEST=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/rstudio-server/current.ver) && \
 #    [ -z "$RSTUDIO_VERSION" ] && RSTUDIO_VERSION=${RSTUDIO_LATEST%.*} || true && \
-RUN wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.02.3-492-amd64.deb && \
-    gdebi rstudio-server-2022.02.3-492-amd64.deb && \
+    #wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.02.3-492-amd64.deb && \
+RUN wget https://rstudio.org/download/latest/stable/server/bionic/rstudio-server-latest-amd64.deb && \    
+    dpkg -i rstudio-server-latest-amd64.deb && \
     rm rstudio-server-*-amd64.deb 
 
 
