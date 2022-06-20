@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     git \
     sudo \
+    cmake \
     wget \
     gdebi-core \
     vim \
