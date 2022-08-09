@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:latest
 
 #RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && \
 #    sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list  && \
@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y \
     qpdf \
     fonts-nanum \
     libpq5 \
+    cmake \
     supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -71,15 +72,15 @@ RUN apt-get update && apt-get install -y \
 #RUN RSTUDIO_LATEST=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/rstudio-server/current.ver) && \
 #    [ -z "$RSTUDIO_VERSION" ] && RSTUDIO_VERSION=${RSTUDIO_LATEST%.*} || true && \
     #wget -q https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.02.3-492-amd64.deb && \
-RUN wget https://rstudio.org/download/latest/stable/server/bionic/rstudio-server-latest-amd64.deb && \    
+RUN wget https://rstudio.org/download/latest/stable/server/jammy/rstudio-server-latest-amd64.deb && \    
     dpkg -i rstudio-server-latest-amd64.deb && \
     rm rstudio-server-*-amd64.deb 
 
 
 # Install Shiny server
-RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-14.04/x86_64/VERSION -O "version.txt" && \
+RUN wget --no-verbose https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-18.04/x86_64/VERSION -O "version.txt" && \
     VERSION=$(cat version.txt)  && \
-    wget --no-verbose "https://s3.amazonaws.com/rstudio-shiny-server-os-build/ubuntu-14.04/x86_64/shiny-server-$VERSION-amd64.deb" -O ss-latest.deb && \
+    wget --no-verbose "https://download3.rstudio.org/ubuntu-18.04/x86_64/shiny-server-$VERSION-amd64.deb" -O ss-latest.deb && \
     gdebi -n ss-latest.deb && \
     rm -f version.txt ss-latest.deb && \
     R -e "install.packages(c('shiny', 'rmarkdown', 'DT', 'data.table', 'ggplot2', 'devtools', 'epiDisplay', 'tableone', 'svglite', 'plotROC', 'pROC', 'labelled', 'geepack', 'lme4', 'PredictABEL', 'shinythemes', 'maxstat', 'manhattanly', 'Cairo', 'future', 'promises', 'GGally', 'fst', 'blogdown', 'metafor', 'roxygen2', 'MatchIt', 'distill', 'lubridate', 'testthat', 'rversions', 'spelling', 'rhub', 'remotes', 'ggpmisc', 'RefManageR', 'tidyr', 'shinytest', 'ggpubr', 'kableExtra', 'timeROC', 'survC1', 'survIDINRI', 'colourpicker', 'shinyWidgets', 'devEMF', 'see', 'aws.s3', 'epiR', 'zip', 'keyring', 'shinymanager', 'kappaSize', 'irr', 'gsDesign', 'jtools', 'svydiags', 'shinyBS', 'highcharter', 'forestplot', 'qgraph', 'bootnet', 'rhandsontable', 'meta', 'showtext', 'officer', 'rvg'), repos='https://cran.rstudio.com/')" && \

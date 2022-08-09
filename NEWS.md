@@ -1,3 +1,10 @@
+## 1.54
+
+* Add `markdown` package
+
+* Apply latest Ubuntu/Rpackages
+
+
 ## 1.52
 
 * Apply latest Rstudio-server
