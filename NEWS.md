@@ -1,3 +1,10 @@
+## 1.55
+
+* Add `quarto` package
+
+* `Shiny-server` for python support.
+
+
 ## 1.54
 
 * Add `markdown` package

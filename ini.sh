@@ -20,6 +20,7 @@ fi
 
 ## Shiny-server setting
 if [ "$PERUSER" != "TRUE" ]; then
+    sed -i '1s/^/python \/usr\/bin\/python3;\n\n/' /etc/shiny-server/shiny-server.conf
     sed -i "s/srv\/shiny-server/home\/${USER}\/ShinyApps/g" /etc/shiny-server/shiny-server.conf 
     sed -i "s/var\/log\/shiny-server/home\/${USER}\/ShinyApps\/log/g" /etc/shiny-server/shiny-server.conf
     sed -i "s/shiny\;/${USER}\;/g" /etc/shiny-server/shiny-server.conf
