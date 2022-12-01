@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:latest
 
 #RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && \
 #    sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list  && \
@@ -19,7 +19,6 @@ RUN apt-get update && apt-get install -y \
     curl \
     git \
     sudo \
-    cmake \
     wget \
     gdebi-core \
     vim \
