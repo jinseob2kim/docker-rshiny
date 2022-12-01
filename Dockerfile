@@ -19,7 +19,6 @@ RUN apt-get update && apt-get install -y \
     curl \
     git \
     sudo \
-    cmake \
     wget \
     gdebi-core \
     vim \
@@ -85,7 +84,7 @@ RUN pip install shiny  && \
     wget --no-verbose "https://download3.rstudio.org/ubuntu-18.04/x86_64/shiny-server-$VERSION-amd64.deb" -O ss-latest.deb && \
     gdebi -n ss-latest.deb && \
     rm -f version.txt ss-latest.deb && \
-    R -e "install.packages(c('shiny', 'quarto', 'rmarkdown', 'markdown', 'DT', 'data.table', 'ggplot2', 'devtools', 'epiDisplay', 'tableone', 'svglite', 'plotROC', 'pROC', 'labelled', 'geepack', 'lme4', 'PredictABEL', 'shinythemes', 'maxstat', 'manhattanly', 'Cairo', 'future', 'promises', 'GGally', 'fst', 'blogdown', 'metafor', 'roxygen2', 'MatchIt', 'distill', 'lubridate', 'testthat', 'rversions', 'spelling', 'rhub', 'remotes', 'ggpmisc', 'RefManageR', 'tidyr', 'shinytest', 'ggpubr', 'kableExtra', 'timeROC', 'survC1', 'survIDINRI', 'colourpicker', 'shinyWidgets', 'devEMF', 'see', 'aws.s3', 'epiR', 'zip', 'keyring', 'shinymanager', 'kappaSize', 'irr', 'gsDesign', 'jtools', 'svydiags', 'shinyBS', 'highcharter', 'forestplot', 'qgraph', 'bootnet', 'rhandsontable', 'meta', 'showtext', 'officer', 'rvg'), repos='https://cran.rstudio.com/')" && \
+    R -e "install.packages(c('shiny', 'quarto', 'rmarkdown', 'markdown', 'DT', 'data.table', 'ggplot2', 'devtools', 'epiDisplay', 'tableone', 'svglite', 'plotROC', 'pROC', 'labelled', 'geepack', 'lme4', 'PredictABEL', 'shinythemes', 'maxstat', 'manhattanly', 'Cairo', 'future', 'promises', 'GGally', 'fst', 'blogdown', 'metafor', 'roxygen2', 'MatchIt', 'distill', 'lubridate', 'testthat', 'rversions', 'spelling', 'rhub', 'remotes', 'ggpmisc', 'RefManageR', 'tidyr', 'shinytest', 'ggpubr', 'kableExtra', 'timeROC', 'survC1', 'survIDINRI', 'colourpicker', 'shinyWidgets', 'devEMF', 'see', 'aws.s3', 'epiR', 'zip', 'keyring', 'shinymanager', 'kappaSize', 'irr', 'gsDesign', 'jtools', 'svydiags', 'shinyBS', 'highcharter', 'forestplot', 'qgraph', 'bootnet', 'rhandsontable', 'meta', 'showtext', 'officer', 'rvg', 'httr', 'shinybrowser'), repos='https://cran.rstudio.com/')" && \
     R -e "remotes::install_github(c('jinseob2kim/jstable', 'jinseob2kim/jskm', 'emitanaka/shinycustomloader', 'Appsilon/shiny.i18n', 'metrumresearchgroup/sinew', 'jinseob2kim/jsmodule', 'yihui/xaringan', 'emitanaka/anicon'))" && \
     R -e "shinytest::installDependencies()" 
 
