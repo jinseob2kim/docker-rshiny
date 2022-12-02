@@ -1,3 +1,7 @@
+## 1.56
+
+* Add `httr`, `shinybrowser` package
+
 ## 1.55
 
 * Add `quarto` package
