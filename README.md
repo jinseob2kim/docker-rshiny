@@ -1,5 +1,5 @@
 # docker-rshiny
-docker image for rstudio &amp; shiny server : original
+docker image for RStudio &amp; Shiny Server : original
 
 [![GitHub workflows](https://github.com/jinseob2kim/docker-rshiny/workflows/DockerImageCI/badge.svg)](https://github.com/jinseob2kim/docker-rshiny/actions)
 [![Docker Build Status](https://img.shields.io/docker/build/jinseob2kim/docker-rshiny.svg)](https://hub.docker.com/r/jinseob2kim/docker-rshiny/builds)
@@ -26,26 +26,26 @@ Assume local user: username **js**, password **js**
 ### Dockerhub
 
 ```shell
-docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -e PERUSER=FALSE -v $(pwd):/home/js jinseob2kim/docker-rshiny
+docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -e PERUSER=FALSE jinseob2kim/docker-rshiny
 ```
 
 
-### GitHub Package Registry
+### GitHub Container Registry
 
 ```shell
-docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -e PERUSER=FALSE -v $(pwd):/home/js ghcr.io/jinseob2kim/docker-rshiny
+docker run -d -p 1111:3838 -p 2222:8787 -e USER=js -e PASSWORD=js -e ROOT=TRUE -e PERUSER=FALSE ghcr.io/jinseob2kim/docker-rshiny
 ```
 
 Default shinyapps directory is `/home/js/ShinyApps`
 
-## Run (2222- rstudio server, 1111- shiny server)
+## Run (2222- RStudio Server, 1111- Shiny Server)
 ### PERUSER=FALSE
 
-1. Local cumputer : http://localhost:2222, http://localhost:1111,
+1. Local computer : http://localhost:2222, http://localhost:1111,
 
 2. Server : **Your IP**:2222, **Your IP**:1111
 
 ### PERUSER=TRUE
-1. Local cumputer : http://localhost:2222/{USERNAME}/, http://localhost:1111/{USERNAME}/,
+1. Local computer : http://localhost:2222/{USERNAME}/, http://localhost:1111/{USERNAME}/,
 
 2. Server : **Your IP**:2222/{USERNAME}/, **Your IP**:1111/{USERNAME}/
