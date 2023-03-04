@@ -1,6 +1,10 @@
-## 1.56
+## 1.57
 
 - Removed `Shiny-server` for python support due to technical problem.
+
+## 1.56
+
+- Add `httr`, `shinybrowser` package
 
 ## 1.55
 
