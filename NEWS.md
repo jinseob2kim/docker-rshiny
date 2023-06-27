@@ -1,3 +1,7 @@
+## 1.58
+
+- Apply latest R version
+
 ## 1.57
 
 - Removed `Shiny-server` for python support due to technical problem.
