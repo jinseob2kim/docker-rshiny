@@ -1,3 +1,7 @@
+## 1.59
+
+- Apply latest RStudio Server Version(2023.06.1+524)
+
 ## 1.58
 
 - Apply latest R version
